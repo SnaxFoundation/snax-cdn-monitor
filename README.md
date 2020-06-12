@@ -1,6 +1,6 @@
 ## Description
 
-Service which checks Snax nodes and gives weights in `etcd` to all of them.
+Service which checks Snax nodes and sets weights for all of them in `etcd` of Traefik router.
 
 ## Environment
 
