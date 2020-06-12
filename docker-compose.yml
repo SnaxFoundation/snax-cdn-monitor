@@ -1,0 +1,31 @@
+version: "0.1"
+
+networks:
+  elastic:
+    external: true
+  frontend:
+    external: true
+
+services:
+  {{SERVICE}}:
+    image: {{REGISTRY}}/{{IMAGE}}:{{VERSION}}
+    environment:
+      MAX_HEAD_BLOCK_LAG_TIME: 1000
+      MAX_IRREVERSIBLE_BLOCK_LAG_NUMBER: 500
+      CHECK_INTERVAL: 15000
+      TEST_PLATFORM: p.twitter
+      TABLE_LIMIT: 100
+      ETCD: '{ "hosts": "" }'
+      MAX_IRREVERSIBLE_LAG_STEPS: 3
+      MIN_SUCCESS_TABLE_STEP_COUNT: 40
+      REQUEST_TIMEOUT: 10000
+      ECTD_SERVER_PREFIX: /traefik/backends/backend2/servers/
+      FULL_WEIGHT: 100
+      ZERO_WEIGHT: 0
+      LOG_LEVEL: info
+    networks:
+      - elastic
+      - frontend
+    deploy:
+      mode: replicated
+      replicas: 1

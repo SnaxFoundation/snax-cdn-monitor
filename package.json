@@ -1,0 +1,17 @@
+{
+  "name": "snax-cdn-monitor",
+  "version": "0.1.29",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^0.5.2",
+    "@grpc/proto-loader": "^0.5.1",
+    "@snaxfoundation/snax-pino-logger": "^1.0.3",
+    "@snaxfoundation/snaxjs": "^20.0.1",
+    "etcd3": "^0.2.13",
+    "node-fetch": "^2.6.0",
+    "ramda": "^0.26.1"
+  }
+}
