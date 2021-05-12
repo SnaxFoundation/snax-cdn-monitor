@@ -6,7 +6,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^0.5.2",
+    "@grpc/grpc-js": "^1.1.8",
     "@grpc/proto-loader": "^0.5.1",
     "@snaxfoundation/snax-pino-logger": "^1.0.3",
     "@snaxfoundation/snaxjs": "^20.0.1",
